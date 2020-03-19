@@ -8,31 +8,34 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private ListView listViewLeft1;
+    private ListView listViewLeft2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         initView();
     }
 
     private void initView() {
-        listViewLeft1 = (ListView) findViewById(R.id.listView_left1);
-        listViewLeft1.setOnItemClickListener(this);
+        listViewLeft2 = (ListView) findViewById(R.id.listView_left2);
+        listViewLeft2.setOnItemClickListener(this);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position){
             case 0:
-                startActivity(new Intent(MainActivity.this,MainActivity.class));
+                startActivity(new Intent(Main2Activity.this,MainActivity.class));
                 break;
             case 1:
-                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+                startActivity(new Intent(Main2Activity.this,Main2Activity.class));
                 break;
+
+
         }
+
     }
 }
